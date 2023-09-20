@@ -16,7 +16,7 @@ const selectRandomImage = function (images) { //f'n to select image at random in
   displayImage(randomImage); //displays random image and properties in browser
 };
 
-const displayImage = function(randomImage){ //f'n to display and access properties of random image object
+const displayImage = function (randomImage) { //f'n to display and access properties of random image object
   const author = randomImage.author; //isolates author value from random image produced by getImage
   const imageAddress = randomImage.download_url; //isolates url value from random image produced by getImage
   authorSpan.innerText = author; //displays random image's author information in browser
@@ -24,4 +24,6 @@ const displayImage = function(randomImage){ //f'n to display and access properti
   imgDiv.classList.remove("hide"); //removes "hide" class from image div
 };
 
-getImage(); //calls f'n to get random image object (placeholder)
+button.addEventListener("click", function () { //triggers API functions/image display when button is clicked
+  getImage(); //calls f'n to get random image object (placeholder)
+})
