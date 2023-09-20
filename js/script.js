@@ -26,4 +26,11 @@ const displayImage = function (randomImage) { //f'n to display and access proper
 
 button.addEventListener("click", function () { //triggers API functions/image display when button is clicked
   getImage(); //calls f'n to get random image object (placeholder)
-})
+});
+
+//---------- document keydown event for show image button ----------
+document.addEventListener("keydown", function (e) { //triggers API functions/image display when enter is pressed
+  if (e.key === "Enter") {
+    getImage();
+  }
+});
